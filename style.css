@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* colors */
+    --black: #191919;
+    --yellow: #ecaa53;
+    --containerWidth: 420px;
+}
+
+body {
+    background-color: var(--black);
+}
+
+.main-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--yellow);
+    width: var(--containerWidth);
+    height: calc(50px*3);
+    position: relative;
+}
+
+/* Head style */
+.head-wrap {
+    width: calc(var(--containerWidth) / 4);
+    height: calc(150px/4);
+    background-color: var(--black);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.neck {
+    width: calc(var(--containerWidth)/14);
+    height: 80%;
+    background-color: var(--yellow);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ear {
+    width: 15px;
+    height: 15px;
+    background-color: var(--yellow);
+    border-radius: 100%;
+    position: relative;
+}
+
+.ear-left {
+    transform: translate(-50%, -50%);
+
+}
+
+.ear-right {
+    transform: translate(50%, -50%);
+
+}
+
+/* black ball  */
+
+.rounded-black-ball {
+    --size: 200px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100%;
+    position: absolute;
+    --bottomX: 19%;
+    --bottomY: 40%;
+    --bottomX2: calc(var(--bottomX) - (var(--bottomX)*2));
+    --bottomY2: var(--bottomY);
+
+    --sideX: -50%;
+    --sideY: 0%;
+    --sideX2: 50%;
+    --sideY2: var(--sideY);
+}
+
+.ball-1 {
+    background-color: var(--black);
+    /* background-color: red; */
+    left: 0px;
+    transform: translate(var(--sideX), var(--sideY));
+}
+
+.ball-2 {
+    background-color: var(--black);
+    left: 0px;
+
+    transform: translate(var(--bottomX), var(--bottomY));
+
+}
+
+.ball-3 {
+    background-color: var(--black);
+    right: 0px;
+    transform: translate(var(--bottomX2), var(--bottomY2))
+}
+
+.ball-4 {
+    background-color: var(--black);
+    right: 0px;
+    transform: translate(var(--sideX2), var(--sideY2));
+
+
+}
